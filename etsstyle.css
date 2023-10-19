@@ -1,17 +1,48 @@
-body{
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Lora', serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100vh;
     color: #000000;
     background-color: #f6eae2;
+    background-image: url('homepfp.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+li{
+    list-style: none;
 }
 
 .navbar{
-    float: right;
+    width: 100%;
+    max-width: 1200px;
+    background-color: transparent;
+    height: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 400px;
+}
+
+.navbar .links{
     display: flex;
-    background-color: #f6eae2;
-    margin-left: 30%;
-    align-items: center;
-    font-size: 16px;
+    gap: 20px;
 }
 
 .navbar a{
@@ -20,8 +51,105 @@ body{
     text-align: center;
     display: inline-block;
     text-decoration: none;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar a:hover{
-    color: rgb(37, 183, 134);
+    color: rgb(48, 223, 165);
+}
+
+section{
+    min-height: 100vh;
+    padding-top: 160px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.Home{
+    max-width: 50%;
+}
+
+.Home h5{
+    font-size: 150%;
+    font-weight: 400;
+}
+
+.Home h1{
+    font-size: 500%;
+    font-weight: 500;
+}
+
+.sosmed{
+    position: absolute;
+    bottom: 32px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sosmed a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 300px;
+    background-color: transparent;
+    color: black; 
+    border: 4px;
+    font-size: 30px;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 200px;
+}
+
+.heading{
+    font-size: 60px;
+    font-weight: 700;
+    color: rgb(108, 31, 136);
+    text-align: center;
+}
+
+.About-Me{
+    text-align: justify;
+}
+
+.About-Me p{
+    font-size: 20px;
+    font-weight: 300;
+    background-color: rgb(246, 172, 184);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.songs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 200px;
+}
+
+.notes{
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(236, 55, 191);
+    text-align: center;
 }
