@@ -12,6 +12,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="etsstyle.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
@@ -21,11 +23,11 @@
             <!-- buat navbar -->
             <div class="navbar">
             <ul class="links">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About Me">About Me</a></li>
-                <li><a href="#Top 5 Songs">Top 5 Songs</a></li>
-                <li><a href="#Analog Collections">Analog Collections</a></li>
-                <li><a href="#Contact Me">Contact Me</a></li>
+                <li><a class = "nav-link" href="#home">Home</a></li>
+                <li><a class = "nav-link" href="#about">About Me</a></li>
+                <li><a class = "nav-link" href="#songs">Top 5 Songs</a></li>
+                <li><a class = "nav-link" href="#collections">Analog Collections</a></li>
+                <li><a class = "nav-link" href="#contact">Contact Me</a></li>
             </ul>
             </div>
         </header>
@@ -72,8 +74,66 @@
             </section>
 
             <!-- buat analog collections -->
-<!--             <section class="collections" id="collections">
-                
-            </section> -->
+            <section class="collections" id="collections">
+                <h1 class="aheading">Jess' Analog Collections</h1>
+                    <h5 class="anotes">I'm in love with grains</h5>
+                    <div class="row"> 
+                        <div class="column">
+                            <img src="pic1.jpg">
+                            <img src="pic2.jpg">
+                            <img src="pic3.jpg">
+                            <img src="pic4.jpg">
+                            <img src="pic10.jpg">
+                        </div>
+                        <div class="column">
+                            <img src="pic5.jpg">
+                            <img src="pic6.jpg">
+                            <img src="pic7.jpg">
+                            <img src="pic8.jpg">
+                            <img src="pic9.jpg">
+                        </div>  
+                    </div>
+            </section>
+
+            <!-- buat contact me -->
+            <section class="contact" id="contact">
+                <div class="container">
+                  <form name="contactMe" action="https://google.com" onsubmit="return validateForm()" method="post">
+                    <h2 class="contact" id="contact">Contact Me</h2>
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="E-mail">
+                    <textarea id="text" rows="4" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                  </form>
+                </div>
+            </section>
+          <script>
+            function validateForm(){
+              var name = document.getElementById("name");
+              var mail = document.getElementById("email");
+              var atps=mail.indexOf("@");
+	            var dots=mail.lastIndexOf(".");
+              var text = document.getElementById("text");
+
+              if(name.value == ""){
+                alert("required field");
+                name.focus;
+                return false;
+              }
+
+              if (atps<1 || dots<atps+2 || dots+2>=mail.length) {
+		            alert("Alamat email tidak valid.");
+		            return false;
+	            } else {
+		            alert("Alamat email valid.");
+	            }
+
+              if(text.value == ""){
+                alert("required field");
+                text.focus;
+                return false;
+              }
+            }
+          </script>
     </body>
 </html>
