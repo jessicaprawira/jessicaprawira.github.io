@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Lora', serif;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body{
@@ -31,13 +32,15 @@ li{
 .navbar{
     width: 100%;
     max-width: 1200px;
-    background-color: transparent;
+    background-color: rgba(249, 212, 232, 0.492);
     height: 60px;
     margin-top: 0;
     margin-bottom: 0;
     margin-right: auto;
     margin-left: auto;
     padding-left: 400px;
+    position: fixed;
+    top: 0;
 }
 
 .navbar .links{
@@ -46,14 +49,18 @@ li{
 }
 
 .navbar a{
-    margin: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     color: #000000;
     text-align: center;
-    display: inline-block;
+    display: block;
     text-decoration: none;
     font-size: 16px;
     align-items: center;
     justify-content: space-between;
+    font-weight: 400;
 }
 
 .navbar a:hover{
@@ -87,8 +94,10 @@ section{
 }
 
 .Home h1{
-    font-size: 500%;
+    font-size: 100px;
     font-weight: 500;
+    color: #6493d986;
+    font-family: 'Alex Brush', cursive;
 }
 
 .sosmed{
@@ -143,13 +152,131 @@ section{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 32px;
-    padding-bottom: 200px;
+    gap: 30px;
+    padding-bottom: 50px;
 }
 
 .notes{
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 50px;
+    font-weight: 550;
     color: rgb(236, 55, 191);
     text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.collections{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 0;
+}
+
+.aheading{
+    font-size: 90px;
+    font-weight: 400;
+    color: rgb(108, 31, 136);
+    text-align: center;
+    font-family: 'Alex Brush', cursive;
+}
+
+.anotes{
+    font-size: 50px;
+    font-weight: 550;
+    color: rgb(111, 189, 225);
+    text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+/* buat 4 kolom yang bersebelahan */
+.column {
+    flex: 50%;
+    max-width: 50%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    align-items: center;
+}
+
+/* responsive untuk membuat 2 kolom jadi 1 baris dari bersebelahan */
+@media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.contact h2{
+    color: black;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+form input, form textarea{
+    border: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 20px;
+    outline: none;
+    background-color: white;
+    font-size: 20px;
+}
+
+form button{
+    padding: 15px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
 }
