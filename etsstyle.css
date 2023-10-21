@@ -36,12 +36,19 @@ li{
     height: 60px;
     margin-top: 0;
     margin-bottom: 0;
-    margin-right: auto;
-    margin-left: auto;
     padding-left: 400px;
     position: fixed;
     top: 0;
 }
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: right; 
+    }
+  }
 
 .navbar .links{
     display: flex;
@@ -55,12 +62,12 @@ li{
     margin-right: 20px;
     color: #000000;
     text-align: center;
-    display: block;
+    display: inline-block;
     text-decoration: none;
     font-size: 16px;
     align-items: center;
     justify-content: space-between;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .navbar a:hover{
@@ -227,6 +234,16 @@ section{
     font-weight: 400;
     color: rgb(108, 31, 136);
     text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.csub{
+    font-size: 50px;
+    font-weight: 550;
+    color: rgb(193, 111, 225);
+    text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+    padding-top: 5px;
 }
 
 .container{
