@@ -97,41 +97,37 @@
 
             <!-- buat contact me -->
             <section class="contact" id="contact">
+              <h1 class="cheading">Get In Touch with Me!</h1>
                 <div class="container">
                   <form name="contactMe" action="https://google.com" onsubmit="return validateForm()" method="post">
                     <h2 class="contact" id="contact">Contact Me</h2>
-                    <input type="text" id="name" placeholder="Full Name" required>
-                    <input type="email" id="email" placeholder="E-mail">
-                    <textarea id="text" rows="4" placeholder="Your Message"></textarea>
+                    <input type="text" id="name" placeholder="Full Name" name="name">
+                    <input type="email" id="email" placeholder="E-mail" name="email">
+                    <textarea id="text" rows="4" placeholder="Your Message" name="msg"></textarea>
                     <input type="submit" value="Submit" class="btn btn-primary">
                   </form>
                 </div>
             </section>
           <script>
-            function validateForm(){
-              var name = document.getElementById("name");
-              var mail = document.getElementById("email");
-              var atps=mail.indexOf("@");
-	            var dots=mail.lastIndexOf(".");
-              var text = document.getElementById("text");
-
-              if(name.value == ""){
-                alert("required field");
-                name.focus;
-                return false;
+            function validateForm() {
+              let x = document.forms["contactMe"]["name"].value;
+              if (x == "") {
+              alert("Name must be filled out");
+              return false;
               }
 
-              if (atps<1 || dots<atps+2 || dots+2>=mail.length) {
-		            alert("Alamat email tidak valid.");
-		            return false;
-	            } else {
-		            alert("Alamat email valid.");
+              let mail = document.forms["contactMe"]["email"].value;
+              var atps=mail.indexOf("@");
+	            var dots=mail.lastIndexOf(".");
+              if (atps<1 || dots<atps+2 || dots+2>=email.length) {
+              alert("Email must be filled out");
+              return false;
 	            }
 
-              if(text.value == ""){
-                alert("required field");
-                text.focus;
-                return false;
+              let msg = document.forms["contactMe"]["msg"].value;
+              if (msg == "") {
+              alert("Message must be filled out");
+              return false;
               }
             }
           </script>
