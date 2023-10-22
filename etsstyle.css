@@ -48,7 +48,7 @@ li{
       width: 100%;
       text-align: right; 
     }
-  }
+}
 
 .navbar .links{
     display: flex;
@@ -312,20 +312,4 @@ form input, form textarea{
     outline: none;
     background-color: white;
     font-size: 20px;
-}
-
-form button{
-    padding: 15px;
-    background-color: black;
-    color: white;
-    font-size: 18px;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    width: 150px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 30px;
 }
